@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import Registered from "@/components/registered";
 
 export default async function Home() {
-  const subId = cookies().get("subId")?.value;
+  const subId = (await cookies()).get("subId")?.value;
 
   return (
     <main className="flex space-y-4 flex-col items-center justify-center min-h-dvh p-12">
